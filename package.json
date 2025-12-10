@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:ui": "cross-env USERNAME=admin PASSWORD=admin123 npx playwright test --ui",
-    "test:headed": "cross-env USERNAME=admin PASSWORD=admin123 npx playwright test --headed",
-    "test:headless": "cross-env USERNAME=admin PASSWORD=admin123 npx playwright test",
+    "test:ui": "cross-env USERNAME= PASSWORD= npx playwright test --ui",
+    "test:headed": "cross-env USERNAME= PASSWORD= npx playwright test --headed",
+    "test:headless": "cross-env USERNAME= PASSWORD= npx playwright test",
     "format": "prettier --write ."
   },
   "keywords": [],
