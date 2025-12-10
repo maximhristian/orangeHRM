@@ -1,11 +1,8 @@
 import { chromium, FullConfig } from "@playwright/test";
+import { getCredentials } from "./support/test-data.utls";
 
 async function globalSetup(config: FullConfig) {
-  if (!process.env.USERNAME || !process.env.PASSWORD) {
-    throw new Error(
-      "Username and Password environment variables are not set in the script",
-    );
-  }
+  getCredentials();
 }
 
 export default globalSetup;
