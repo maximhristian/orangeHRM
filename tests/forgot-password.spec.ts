@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { ForgotPasswordPage } from "../page/forgot-password.page";
-import { LoginPage } from "../page/login.page";
+import { ForgotPasswordPage } from "../pages/forgot-password.page";
+import { LoginPage } from "../pages/login.page";
 
 test.describe("Forgot Password Page Tests", () => {
   let forgotPasswordPage: ForgotPasswordPage;
@@ -17,7 +17,7 @@ test.describe("Forgot Password Page Tests", () => {
     forgotPasswordPage.usernameInput.fill("username");
     await expect(forgotPasswordPage.resetButton).toHaveText("Reset Password");
     await forgotPasswordPage.resetButton.click();
-    await page.waitForLoadState("domcontentloaded");
-    await expect(page).toHaveURL(/.*sendPasswordReset.*/);
+    await page.waitForEvent("load");
+    await page.waitForURL(/.*sendPasswordReset.*/);
   });
 });

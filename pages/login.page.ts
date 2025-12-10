@@ -1,6 +1,7 @@
 import { expect, Locator, Page } from "@playwright/test";
+import { BasePage } from "./base.page";
 
-export class LoginPage {
+export class LoginPage extends BasePage {
   readonly page: Page;
   readonly usernameInput: Locator;
   readonly passwordInput: Locator;
@@ -11,6 +12,7 @@ export class LoginPage {
   readonly exclamationIcon: Locator;
 
   constructor(page: Page) {
+    super(page);
     this.page = page;
     this.usernameInput = page.locator('[name="username"]');
     this.passwordInput = page.locator('[name="password"]');

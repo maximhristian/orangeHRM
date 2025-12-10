@@ -1,5 +1,5 @@
 import { test, expect, Locator } from "@playwright/test";
-import { LoginPage } from "../page/login.page";
+import { LoginPage } from "../pages/login.page";
 import { getCredentials } from "../support/test-data.utls";
 import { ErrorMessages } from "../enums/error-messages";
 
