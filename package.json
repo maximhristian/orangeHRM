@@ -5,7 +5,8 @@
   "scripts": {
     "test:ui": "cross-env USERNAME=admin PASSWORD=admin123 npx playwright test --ui",
     "test:headed": "cross-env USERNAME=admin PASSWORD=admin123 npx playwright test --headed",
-    "test:headless": "cross-env USERNAME=admin PASSWORD=admin123 npx playwright test"
+    "test:headless": "cross-env USERNAME=admin PASSWORD=admin123 npx playwright test",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^24.10.2",
-    "cross-env": "^10.1.0"
+    "cross-env": "^10.1.0",
+    "prettier": "3.7.4"
   }
 }

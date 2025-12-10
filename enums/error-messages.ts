@@ -1,3 +1,3 @@
 export enum ErrorMessages {
-    REQUIRED = 'Required',
+  REQUIRED = "Required",
 }
